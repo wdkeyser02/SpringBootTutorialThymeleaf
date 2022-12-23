@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<link th:href="@{/styles.css}" rel="stylesheet" />
+<title>Spring Boot 3.0.0 Thymeleaf Messages</title>
+</head>
+<body>
+<h1 th:text="${title}"></h1>
+<table>
+	<tr th:each="message : ${messages}">
+		<td th:text="${message.id}"></td>
+		<td th:text="${message.title}"></td>
+		<td th:text="${message.text}"></td>
+	</tr>
+</table>
+<p><a href="/">Home</a></p>
+</body>
+</html>

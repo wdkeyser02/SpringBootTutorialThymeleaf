@@ -2,9 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
+<link th:href="@{/styles.css}" rel="stylesheet" />
 <title>Spring Boot 3.0.0 Thymeleaf</title>
 </head>
 <body>
-<h1>Welcome home!</h1>
+<h1 th:text="${title}"></h1>
+
+<p><a href="/messages">Messages</a></p>
+<p><a href="/users">Users</a></p>
+
 </body>
 </html>
