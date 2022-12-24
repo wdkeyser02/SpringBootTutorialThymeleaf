@@ -7,7 +7,7 @@
 </head>
 <body>
 	<h1>Result</h1>
-    <table>
+    <table th:if="${messages !=null and !messages.empty}">
 		<tr th:each="message : ${messages}">
 			<td th:text="${message.id}"></td>
 			<td th:text="${message.title}"></td>
@@ -15,6 +15,6 @@
 		</tr>
 	</table>
     <p><a href="/message">Submit another message</a></p>
-    <p><a href="/messages">List message</a></p>
+    <p><a href="/messages">List messages</a></p>
 </body>
 </html>

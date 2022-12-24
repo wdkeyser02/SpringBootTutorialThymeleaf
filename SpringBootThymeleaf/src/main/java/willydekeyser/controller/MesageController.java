@@ -19,7 +19,7 @@ public class MesageController {
 	private final MessageService messageService;
 	
 	
-	@GetMapping("message")
+	@GetMapping("/message")
 	public String messageForm(Model model) {
 		model.addAttribute("message", new Message());
 		return "message";

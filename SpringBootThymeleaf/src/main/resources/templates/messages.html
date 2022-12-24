@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1 th:text="${title}"></h1>
-<table>
+<table th:if="${messages !=null and !messages.empty}">
 	<tr th:each="message : ${messages}">
 		<td th:text="${message.id}"></td>
 		<td th:text="${message.title}"></td>
