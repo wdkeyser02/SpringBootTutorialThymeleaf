@@ -18,8 +18,9 @@ public class MessageService {
 		return messages;
 	}
 	
-	public void addMessage(Message message) {
+	public List<Message> addMessage(Message message) {
 		messages.add(message);
+		return messages;
 	}
 
 }

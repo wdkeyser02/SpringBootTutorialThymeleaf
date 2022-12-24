@@ -27,8 +27,7 @@ public class MesageController {
 	
 	@PostMapping("/message")
 	  public String greetingSubmit(@ModelAttribute Message message, Model model) {
-		messageService.addMessage(message);
-		List<Message> messages = messageService.getMessages();
+		List<Message> messages = messageService.addMessage(message);
 		model.addAttribute("messages", messages);
 	    return "result";
 	  }
