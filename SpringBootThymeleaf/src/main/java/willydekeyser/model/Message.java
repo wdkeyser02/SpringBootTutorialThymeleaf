@@ -1,5 +1,16 @@
 package willydekeyser.model;
 
-public record Message(Long id, String title, String text) {
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class Message {
+
+	private Long id;
+	private String title;
+	private String text;
+	
 }
