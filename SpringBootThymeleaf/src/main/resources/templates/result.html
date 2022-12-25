@@ -1,19 +1,11 @@
 <!DOCTYPE HTML>
 <html xmlns:th="https://www.thymeleaf.org">
-<head> 
-    <title>Getting Started: Handling Form Submission</title>
-    <link th:href="@{/styles.css}" rel="stylesheet" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-</head>
+<head th:replace="fragments :: head"></head>
 <body>
 	<h1>Result</h1>
-    <table th:if="${messages !=null and !messages.empty}">
-		<tr th:each="message : ${messages}">
-			<td th:text="${message.id}"></td>
-			<td th:text="${message.title}"></td>
-			<td th:text="${message.text}"></td>
-		</tr>
-	</table>
+	<div th:if="${messages !=null and !messages.empty}" >
+		<div th:replace="fragments :: table"></div>
+	</div>
     <p><a href="/message">Submit another message</a></p>
     <p><a href="/messages">List messages</a></p>
 </body>

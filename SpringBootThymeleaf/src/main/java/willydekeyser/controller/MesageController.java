@@ -22,11 +22,13 @@ public class MesageController {
 	@GetMapping("/message")
 	public String messageForm(Model model) {
 		model.addAttribute("message", new Message());
+		model.addAttribute("title", "Messages");
 		return "message";
 	}
 	
 	@PostMapping("/message")
 	  public String greetingSubmit(@ModelAttribute Message message, Model model) {
+		model.addAttribute("title", "Messages");
 		List<Message> messages = messageService.addMessage(message);
 		model.addAttribute("messages", messages);
 	    return "result";

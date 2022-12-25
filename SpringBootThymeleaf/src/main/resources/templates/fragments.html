@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head th:fragment="head">
+	<meta charset="UTF-8">
+	<link th:href="@{/styles.css}" rel="stylesheet" />
+	<title th:text="${title}">></title>
+</head>
+
+
+<div th:fragment="table">
+	<table>
+		<tr th:each="message : ${messages}">
+			<td th:text="${message.id}"></td>
+			<td th:text="${message.title}"></td>
+			<td th:text="${message.text}"></td>
+		</tr>
+	</table>
+</div>
+
+<div th:fragment="users_table">
+	<table>
+		<tr th:each="user : ${users}">
+			<td th:text="${user.id}">1</td>
+			<td th:text="${user.username}"></td>
+			<td th:text="${user.password}"></td>
+			<td th:text="${user.firstName}"></td>
+			<td th:text="${user.lastName}"></td>
+			<td th:text="${user.emailAddress}"></td>
+		</tr>
+	</table>
+</div>
+
+</html>
