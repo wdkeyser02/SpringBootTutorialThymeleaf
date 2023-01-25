@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head th:replace="fragments :: head"></head>
+<head th:replace="~{fragments :: head}"></head>
 <body>
 	<h1 th:text="${title}"></h1>
 	<div th:if="${messages !=null and !messages.empty}" >
-		<div th:replace="fragments :: table"></div>
+		<div th:replace="~{fragments :: table}"></div>
 	</div>
 	<p><a href="/">Home</a></p>
 </body>
